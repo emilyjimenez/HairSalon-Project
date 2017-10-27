@@ -32,6 +32,11 @@ _A hair salon web app that allows the user to add a list of stylists, and add li
 - CREATE TABLE stylists (id serial PRIMARY KEY, name VARCHAR(255), rate INT, skills VARCHAR(255), client_id INT);
 - CREATE TABLE clients (id serial PRIMARY KEY, name VARCHAR(255), birthday INT, email VARCHAR(255));
 
+- CREATE DATABASE emily_jimenez_test;
+- USE emily_jimenez_test;
+- CREATE TABLE stylists (id serial PRIMARY KEY, name VARCHAR(255), rate INT, skills VARCHAR(255), client_id INT);
+- CREATE TABLE clients (id serial PRIMARY KEY, name VARCHAR(255), birthday INT, email VARCHAR(255));
+
 ## Setup/Installation Requirements
 
 
