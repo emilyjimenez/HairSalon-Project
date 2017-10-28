@@ -1,3 +1,11 @@
 @{
   Layout = "_Layout";
 }
+@if (Model["selected-client"] != null)
+{
+  <div class="well">
+  <h4>@Model["selected-client"].Name</h4>
+  <h5><b>birthday:</b> @Model["selected-client"].Birthday</h5>
+  <h5><b>email:</b> @Model["selected-client"].Email</h5>
+  </div>
+}

@@ -107,5 +107,23 @@ namespace HairSalon.Models.Tests
 
       CollectionAssert.AreEqual(testList, result);
     }
+
+    [TestMethod]
+    public void DeleteClientsByStylist_DeletesAllClientsFromStylist_Stylist()
+    {
+      Client client1 = new Client("Joanne", 092982, "joanneS@me.com", 1);
+      client1.Save();
+      Client client2 = new Client("Cynthia", 101188, "c.smith@.com", 2);
+      client2.Save();
+      Client client3 = new Client("Becky", 121479, "b_sanchez@yahoo.com", 1);
+      client3.Save();
+
+      Client.DeleteClientsByStylist(2);
+
+      List<Client> testList = Client.GetAll();
+      List<Client> expectedList = new List<Client>{client1, client3}
+
+      CollectionAssert.AreEqual(testList, expectedList);
+    }
   }
 }

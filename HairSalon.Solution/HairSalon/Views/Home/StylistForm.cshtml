@@ -3,10 +3,18 @@
 }
 <h1>Add Stylist</h1>
 <br></br>
-<form action="/new" method="post">
+<form action="/stylists/new" method="post">
   <div class="form-group">
     <label class= "stylist-name" for="stylist-name">Name:</label>
        <input type="text" class="form-control" name="stylist-name" id="stylist-name" required autofocus>
+  </div>
+  <div class="form-group">
+    <label class= "rate" for="rate">Rate:</label>
+       <input type="number" class="form-control" name="rate" id="rate" required>
+  </div>
+  <div class="form-group">
+    <label class= "skills" for="skills">Skills:</label>
+       <input type="text" class="form-control" name="skills" id="skills" required>
   </div>
   <div class="form-group">
     <button class="btn btn-info" type="submit">Submit</button>
