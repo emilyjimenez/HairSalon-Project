@@ -11,7 +11,7 @@ namespace HairSalon.Controllers
     public ActionResult Stylists()
     {
       List<Stylist> model = Stylist.GetAll();
-      return View(model);
+      return View("Stylists", model);
     }
 
     [HttpGet("/stylists/new")]
@@ -78,28 +78,31 @@ namespace HairSalon.Controllers
     }
 
     [HttpPost("/stylists/{id}/delete")]
-      public ActionResult DeleteStylist(int id)
-      {
-        Stylist selectedStylist = Stylist.Find(id);
-        selectedStylist.Delete();
-        Client.DeleteClientsByStylist(id);
-        List<Stylist> allStylists = Stylist.GetAll();
-        return View("Stylists", allStylists);
+    public ActionResult DeleteStylist(int id)
+    {
+      Stylist selectedStylist = Stylist.Find(id);
+      selectedStylist.Delete();
+      Client.DeleteClientsByStylist(id);
+      List<Stylist> allStylists = Stylist.GetAll();
+      return View("Stylists", allStylists);
 
-      }
+    }
 
-      [HttpPost("/stylists/{id}/clients/{clientId}/delete")]
-      public ActionResult DeleteClient(int id, int clientId)
-      {
-        Client selectedClient = Client.Find(clientId);
-        selectedClient.Delete();
-        Dictionary<string, object> model = new Dictionary<string, object> {};
-        model.Add("selected-client", null);
-        Stylist selectedStylist = Stylist.Find(id);
-        model.Add("this-stylist", selectedStylist);
-        List<Client> allClients = Client.GetAllClientsByStylist(id);
-        model.Add("stylist-clients", allClients);
-        return View("StylistDetail", model);
-      }
+    [HttpPost("/stylists/{id}/clients/{clientId}/delete")]
+    public ActionResult DeleteClient(int id, int clientId)
+    {
+      Client selectedClient = Client.Find(clientId);
+      selectedClient.Delete();
+
+      Dictionary<string, object> model = new Dictionary<string, object> {};
+      model.Add("selected-client", null);
+
+      Stylist selectedStylist = Stylist.Find(id);
+      model.Add("this-stylist", selectedStylist);
+
+      List<Client> allClientsByStylist = Client.GetAllClientsByStylist(id);
+      model.Add("stylist-clients", allClientsByStylist);
+      return View("StylistDetail", model);
+    }
   }
 }

@@ -5,8 +5,10 @@
 <h2>@Model["this-stylist"].Name</h2>
 <h4>Rate: $@Model["this-stylist"].Rate /hr</h4>
 <h4>Skills: @Model["this-stylist"].Skills</h4>
-
-<h3>Clients</h3>
+<form action='/stylists/@Model["this-stylist"].Id/delete' method="post">
+  <button class="btn btn-danger" type="submit">Delete Stylist</button>
+</fom>
+<h4>Clients</h4>
 
 @if(Model["stylist-clients"].Count == 0)
       {
@@ -27,5 +29,7 @@
 
 <br></br>
 @Html.Partial("selected-client")
+<br></br>
+<a href='/stylists/@Model["this-stylist"].Id/clients/new'>Add another client</a>
 <br></br>
 <a href="/">Go Back</a>

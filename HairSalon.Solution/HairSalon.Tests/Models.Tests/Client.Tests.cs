@@ -121,7 +121,7 @@ namespace HairSalon.Models.Tests
       Client.DeleteClientsByStylist(2);
 
       List<Client> testList = Client.GetAll();
-      List<Client> expectedList = new List<Client>{client1, client3}
+      List<Client> expectedList = new List<Client>{client1, client3};
 
       CollectionAssert.AreEqual(testList, expectedList);
     }
