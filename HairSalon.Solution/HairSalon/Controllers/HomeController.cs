@@ -83,7 +83,7 @@ namespace HairSalon.Controllers
         Stylist selectedStylist = Stylist.Find(id);
         selectedStylist.Delete();
         Client.DeleteClientsByStylist(id);
-        List<Cuisine> allStylists = Stylist.GetAll();
+        List<Stylist> allStylists = Stylist.GetAll();
         return View("Stylists", allStylists);
 
       }
@@ -97,7 +97,7 @@ namespace HairSalon.Controllers
         model.Add("selected-client", null);
         Stylist selectedStylist = Stylist.Find(id);
         model.Add("this-stylist", selectedStylist);
-        List<Client> allClientss = Client.GetAllClientsByStylist(id);
+        List<Client> allClients = Client.GetAllClientsByStylist(id);
         model.Add("stylist-clients", allClients);
         return View("StylistDetail", model);
       }

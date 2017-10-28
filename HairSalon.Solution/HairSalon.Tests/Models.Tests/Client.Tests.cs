@@ -109,7 +109,7 @@ namespace HairSalon.Models.Tests
     }
 
     [TestMethod]
-    public void DeleteClientsByStylist_DeletesAllClientsFromStylist_Stylist()
+    public void DeleteClientsByStylist_DeletesAllClientsFromStylist_Client()
     {
       Client client1 = new Client("Joanne", 092982, "joanneS@me.com", 1);
       client1.Save();
