@@ -7,7 +7,7 @@
 <h4>Skills: @Model["this-stylist"].Skills</h4>
 <form action='/stylists/@Model["this-stylist"].Id/delete' method="post">
   <button class="btn btn-danger" type="submit">Delete Stylist</button>
-</fom>
+</form>
 <h4>Clients</h4>
 
 @if(Model["stylist-clients"].Count == 0)

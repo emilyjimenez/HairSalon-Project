@@ -8,7 +8,7 @@
     <h4>@Model["selected-client"].Name</h4>
     <h5><b>birthday:</b> @Model["selected-client"].Birthday</h5>
     <h5><b>email:</b> @Model["selected-client"].Email</h5>
-    <form action='/stylists/@Model["this-stylist"].Id/clients/@Model["selected-client"].Id/delete'>
+    <form action='/stylists/@Model["this-stylist"].Id/clients/@Model["selected-client"].Id/delete' method="post">
       <button class="btn btn-danger" type="submit">Delete Client</button>
     </form>
   </div>
