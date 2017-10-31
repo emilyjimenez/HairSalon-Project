@@ -39,7 +39,7 @@ _A hair salon web app that allows the user to add a list of stylists, and add li
 
 ## Setup/Installation Requirements
 
-1. Clone [HairSalon-Project]{https://github.com/emilyjimenez/HairSalon-Project} from Github
+1. Clone [HairSalon-Project](https://github.com/emilyjimenez/HairSalon-Project) from Github
 2. Make sure you have MAMP installed and are using .NET Core 1.1
 3. Turn servers on via MAMP, and then load emily_jimenez and emily_jimenez_test databases into the PHPmyadmin tool in MAMP
 4. Run dotnet restore and build on both the HairSalon folder and HairSalon.Tests folder, then run dotnet test on the test folder
