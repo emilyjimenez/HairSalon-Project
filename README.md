@@ -43,7 +43,7 @@ _A hair salon web app that allows the user to add a list of stylists, and add li
 2. Make sure you have MAMP installed and are using .NET Core 1.1
 3. Turn servers on via MAMP, and then load emily_jimenez and emily_jimenez_test databases into the PHPmyadmin tool in MAMP
 4. Run dotnet restore and build on both the HairSalon folder and HairSalon.Tests folder, then run dotnet test on the test folder
-5. After restore/build/test, run dotnet run into your terminal and go to localhost5000 in your preferred web browser
+5. After restore/build/test, run dotnet run on the HairSalon folder on your terminal and go to localhost5000 in your preferred web browser
 
 ## Known Bugs
 
