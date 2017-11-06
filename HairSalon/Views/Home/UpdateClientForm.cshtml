@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+<h1>Update Stylist</h1>
+<br></br>
+<form action='/stylists/@Model["this-stylist"].Id/clients/@Model["this-client"].Id/update/done' method="post">
+  <div class="form-group">
+    <label class= "name" for="name">Name:</label>
+       <input type="text" class="form-control" name="update-name" id="stylist-name" required autofocus>
+  </div>
+  <div class="form-group">
+    <label class= "bday" for="rate">Birthday:</label>
+       <input type="number" class="form-control" name="update-bday" id="bday" required>
+  </div>
+  <div class="form-group">
+    <label class= "email" for="skills">Email:</label>
+       <input type="text" class="form-control" name="update-email" id="email" required>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-info" type="submit">Submit</button>
+  </div>
+</form>
