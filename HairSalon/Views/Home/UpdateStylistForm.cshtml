@@ -3,19 +3,20 @@
 }
 <h1>Update Stylist</h1>
 <br></br>
-<form action='/stylists/@Model["this-stylist"].Id/update' method="post">
+<form action='/stylists/@Model.Id/update/done' method="post">
   <div class="form-group">
     <label class= "stylist-name" for="stylist-name">Name:</label>
-       <input type="text" class="form-control" name="stylist-name" id="stylist-name" required autofocus>
+       <input type="text" class="form-control" name="update-name" id="stylist-name" required autofocus>
   </div>
   <div class="form-group">
     <label class= "rate" for="rate">Rate:</label>
-       <input type="number" class="form-control" name="rate" id="rate" required>
+       <input type="number" class="form-control" name="update-rate" id="rate" required>
   </div>
   <div class="form-group">
     <label class= "skills" for="skills">Skills:</label>
-       <input type="text" class="form-control" name="skills" id="skills" required>
+       <input type="text" class="form-control" name="update-skills" id="skills" required>
   </div>
   <div class="form-group">
     <button class="btn btn-info" type="submit">Submit</button>
   </div>
+</form>

@@ -161,7 +161,7 @@ namespace HairSalon.Models
 
       MySqlParameter searchId = new MySqlParameter();
       searchId.ParameterName = "@searchId";
-      searchId.Value = Id;
+      searchId.Value = this.Id;
       cmd.Parameters.Add(searchId);
 
       //name

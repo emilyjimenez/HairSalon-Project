@@ -8,6 +8,10 @@
 <form action='/stylists/@Model["this-stylist"].Id/delete' method="post">
   <button class="btn btn-danger" type="submit">Delete Stylist</button>
 </form>
+<br>
+<form action='/stylists/@Model["this-stylist"].Id/update' method="get">
+  <button class="btn btn-info" type="submit">Update Stylist</button>
+</form>
 <h4>Clients</h4>
 
 @if(Model["stylist-clients"].Count == 0)

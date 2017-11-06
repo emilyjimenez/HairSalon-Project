@@ -43,22 +43,20 @@ namespace HairSalon.Controllers
     }
 
     [HttpGet("/stylists/{id}/update")]
-    public ActionResult UpdateStylistForm()
+    public ActionResult UpdateStylistForm(int id)
     {
-      return View();
+      Stylist updateStylist = Stylist.Find(id);
+      return View(updateStylist);
     }
 
-    [HttpPost("/stylists/{id}/update")]
+    [HttpPost("/stylists/{id}/update/done")]
     public ActionResult UpdateStylist(int id)
     {
-      Dictionary<string, object> model = new Dictionary<string, object>{};
-      model.Add("selected-client", null);
-      Stylist selectedStylist = Stylist.Find(id);
-      model.Add("this-stylist", selectedStylist);
-      selectedStylist.Update();
+      Stylist updateStylist = Stylist.Find(id);
+      updateStylist.Update(Request.Form["update-name"], Int32.Parse(Request.Form["update-rate"]), Request.Form["update-skills"]);
       List<Stylist> allStylists = Stylist.GetAll();
 
-      return View(model);
+      return Redirect("/stylists/"+id);
     }
 
     [HttpGet("/stylists/{id}/clients/new")]
@@ -120,7 +118,6 @@ namespace HairSalon.Controllers
     {
       Stylist selectedStylist = Stylist.Find(id);
       selectedStylist.Delete();
-      Client.DeleteClientsByStylist(id);
       List<Stylist> allStylists = Stylist.GetAll();
       return View("Stylists", allStylists);
 
