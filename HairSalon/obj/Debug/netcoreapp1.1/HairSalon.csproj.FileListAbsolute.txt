@@ -1,0 +1,8 @@
+/Users/ECYCLE/Desktop/CODING/HairSalon-Project/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.deps.json
+/Users/ECYCLE/Desktop/CODING/HairSalon-Project/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.runtimeconfig.json
+/Users/ECYCLE/Desktop/CODING/HairSalon-Project/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.runtimeconfig.dev.json
+/Users/ECYCLE/Desktop/CODING/HairSalon-Project/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.dll
+/Users/ECYCLE/Desktop/CODING/HairSalon-Project/HairSalon/bin/Debug/netcoreapp1.1/HairSalon.pdb
+/Users/ECYCLE/Desktop/CODING/HairSalon-Project/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.AssemblyInfo.cs
+/Users/ECYCLE/Desktop/CODING/HairSalon-Project/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.dll
+/Users/ECYCLE/Desktop/CODING/HairSalon-Project/HairSalon/obj/Debug/netcoreapp1.1/HairSalon.pdb
